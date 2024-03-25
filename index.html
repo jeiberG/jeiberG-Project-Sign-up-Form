@@ -7,8 +7,52 @@
     <link rel="stylesheet" href="css/reset_pro.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    
+    <section>
+        <div class="content-logo">
+            <img src="./img/logo.png" width="100px"  alt="simbolo de la nacion del aire">
+            <h1>ODIN</h1>
+        </div>
+    </section>
+    <main>
+        <section>
+            <p>This is not a real online service! You know you need something
+            like this in your life to help you realize your deepest dreams.
+            Sign up now to get started.</p>
+            <p>You know you want to.</p>
+        </section>
+        
+        <section class="content-form">
+            <form id="myForm" action="#" method="post">
+                <fieldset>
+                    <legend>Let's do this!</legend>
+
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="username" minlength="5" required>
+                    
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="lastname" minlength="5" required>
+                    
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+                    
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required oninput="checkPasswordMatch()" >
+
+                    <p id="password_match_message"></p>
+                </fieldset>
+                <button type="submit" id="myForm">Create Account</button>
+                <p>¿Ya tienes una cuenta? <a href="#">Acceso</a></p>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

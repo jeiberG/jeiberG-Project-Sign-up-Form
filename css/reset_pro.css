@@ -9,6 +9,15 @@
     👉 Unificar la tipografía de todas las etiquetas de una web
 
 */
+
+/* Aquí definimos la fuente personalizada */
+@font-face {
+  font-family: 'Norse Bold';
+  src: url('../fonts/Norse-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Aquí definimos las Custom properties */
 :root {
   --negro: #393939;
