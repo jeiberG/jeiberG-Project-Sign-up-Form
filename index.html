@@ -7,52 +7,54 @@
     <link rel="stylesheet" href="css/reset_pro.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <section>
-        <div class="content-logo">
+    <section class="aside">
+        <header class="content-logo">
             <img src="./img/logo.png" width="100px"  alt="simbolo de la nacion del aire">
             <h1>ODIN</h1>
-        </div>
+        </header>
     </section>
     <main>
-        <section>
-            <p>This is not a real online service! You know you need something
-            like this in your life to help you realize your deepest dreams.
+        <section class="content-text">
+            <p>This is not a real online service! You know you need something <br>
+            like this in your life to help you realize your deepest dreams. <br>
             Sign up now to get started.</p>
-            <p>You know you want to.</p>
+            <p>You <em>know </em>you want to.</p>
         </section>
-        
-        <section class="content-form">
-            <form id="myForm" action="#" method="post">
-                <fieldset>
-                    <legend>Let's do this!</legend>
-
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="username" minlength="5" required>
-                    
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="lastname" minlength="5" required>
-                    
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                    
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
-                    
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" required>
-                    
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required oninput="checkPasswordMatch()" >
-
-                    <p id="password_match_message"></p>
-                </fieldset>
-                <button type="submit" id="myForm">Create Account</button>
-                <p>¿Ya tienes una cuenta? <a href="#">Acceso</a></p>
+        <div class="comment-section">
+            <h1 class="comment-reply-title">Let's do this!</h1>
+            <form id="commentform" class="comment-form">
+                <div class="comment-form-name">
+                    <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
+                    <label for="name" data-help="¿Are you 11 from Stranger Things?">Name</label>
+                </div>
+                <div class="comment-form-surname">
+                    <input id="surname" placeholder="Surname *" name="surname" type="text" value="" size="30" maxlength="245" required>
+                    <label for="surname" data-help="A girl has no name- Arya Stark">Surname</label>
+                </div>
+                <div class="comment-form-email">
+                    <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
+                    <label for="email" data-help="Format email@email.com">Email</label>
+                </div>
+                <div class="comment-form-phone">
+                    <input type="tel" id="phone-number" placeholder="###-###-####" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <label for="phone-number" data-help="Enter your phone number">PHONE NUMBER</label>
+                </div>
+                <div class="comment-form-password">
+                    <input type="password" id="password" placeholder="Enter your password" name="password" required>
+                    <label for="password" data-help="Choose a strong password">PASSWORD</label>
+                </div>
+                <div class="comment-form-comfirm-password">
+                    <input type="password" id="confirm-password"  placeholder="Confirm your password" name="confirm-password" required>
+                    <label for="confirm-password" data-help="Confirm your password">CONFIRM PASSWORD</label>
+                </div>
+                <div class="form-submit">
+                    <input name="submit" type="submit" id="submit" class="submit" value="Create Acount">
+                    <p>¿Ya tienes una cuenta? <a style="font-weight: 600 ;color: #8BC34A;" href="#">Acceso</a></p>
+                </div>
             </form>
-        </section>
+        </div>
     </main>
 </body>
 </html>
